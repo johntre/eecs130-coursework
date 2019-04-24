@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>American literature</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <style>
+          .menu1, .menu2, .card1, .card2, .card3, .main, .aside{
+             padding: 5px;
+          }
+          body{
+            background: url(https://i.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg);
+            background-repeat: repeat-y;
+            background-position: center;
+          }
+
+          .container {
+             display: grid;
+           grid-template-columns: 1fr 1fr 1fr 1fr;
+             grid-template-rows: 0.1fr 0.1fr 1fr 0.11fr 1fr;
+             grid-template-areas: "a a a a"
+                                  ". b b ."
+                                  ". c d ."
+                                  ". e e ."
+                                  ". f f .";
+
+
+             min-height: 100vh;
+             font-family: 'Saira Extra Condensed', sans-serif;
+             word-spacing: 8px;
+             font-size: 20px;
+
+
+          }
+
+
+          .menu1{
+
+            grid-area: a;
+            text-align: center;
+
+          }
+          .menu2{
+             grid-area:b;
+             text-align: center;
+          }
+          a:hover {
+            color: white;
+          }
+          .card1{
+             grid-area:c;
+             text-align: center;
+          }
+          .card2{
+             grid-area:d;
+             text-align: center;
+          }
+          .card3{
+             grid-area:e;
+             text-align: center;
+          }
+
+          .aside{
+             grid-area: f;
+             text-align: center;
+
+          }
+
+
+          .menu1 div{
+             background: #FF5733;
+                height: 100%
+          }
+
+          .menu2 div{
+             background: yellow;
+             height: 100%;
+          }
+
+          .card1 section, .card2 section, .card3 section{
+             background: lightblue;
+                height:100%;
+          }
+
+          @media (max-width: 1024px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+             grid-template-areas: "a"
+                                  "b"
+                                  "c"
+                                  "d"
+                                  "e"
+                                  "f";
+                height: 100vh;
+          }
+
+          }
+          @media (max-width: 480px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+             grid-template-areas: "a"
+                                  "b"
+                                  "c"
+                                  "d"
+                                  "e"
+                                  "f";
+                height: 100vh;
+
+          }
+
+          }
+
+
+</style>
+</head>
+<body>
+  <!-- https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+  <div class="container">
+     <!-- left menu -->
+     <section class="menu1">
+        <div>American Literature
+          <nav>
+          <a href="./index.html"> Home</a>
+          <a href="./childrenstories.html"> Children's stories</a>
+          <a href=""> Stories for Students</a>
+          <a href=""> Great Short Stories</a>
+
+        </nav>
+        <p> Out here giving the best suggestions for books </p>
+        </div>
+
+     </section>
+
+
+     <section class="menu2">
+       <h2> Joseph Martin Kronheim </h2>
+
+     </section>
+
+     <section class="card1">
+
+
+
+         <img src="joseph.jpg" alt="Joseph Martin Kronheim"/>
+
+    </section>
+
+        <section class="card2">
+
+
+         <p>Joseph Martin Kronheim was a German lithographer and wood engraver
+
+
+           who illustrated children's picture books including My First Picture Book,
+
+           Printed in colours by Kronheim (1875). He advanced a printing process
+
+            using zinc instead of wood blocks, which reduced printing time. Kronheim
+
+            & Co. printed hundreds of biblical prints and book illustrations, more than
+
+            5,000 total by the 1860s. His works are featured in our Favorite Fairy Tales
+           </p>
+
+         </section>
+
+
+            <section class="card3">
+
+            <p> One of his most notable works is Five Little Pigs. Click the link below to see the short story: </p>
+            <a href="./storydetail.html"> Five Little Pigs</a>
+
+          </section>
+
+
+
+            <section class="aside">
+            <p> Notable works of Joseph Martin Kronheim: </p>
+            <ol>
+       <li>Five Little Pigs</li>
+       <li>Little Bo-Peep</li>
+       <li>My First Alphabet</li>
+       <li>Old Mother Goose and Her Son Jack</li>
+       <li>The Little Old Woman Who Lived in a Shoe</li>
+           </ol>
+
+         </section>
+
+
+  </body>
+  </html>

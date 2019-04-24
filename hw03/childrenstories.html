@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Children's Stories</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <style>
+          .menu1, .menu2, .card1, .card2, .card3, .card4, .card5, .card6{
+             padding: 5px;
+          }
+          h1 {
+            font-size: 25px;
+          }
+          body {
+             font-family: 'Saira Extra Condensed', sans-serif;
+          }
+          .container {
+             display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+             grid-template-rows: 0.3fr 1fr 1fr;
+             grid-template-areas:
+             "a a a"
+             "b c d"
+             "e f g";
+
+             min-height: 100vh;
+             font-family: 'Saira Extra Condensed', sans-serif;
+             word-spacing: 8px;
+             font-size: 20px;
+          }
+
+
+          .menu1{
+            text-align: center;
+            grid-area: a;
+          }
+          .card1{
+             grid-area:b
+          }
+          .card2{
+             grid-area:c
+          }
+          .card3{
+             grid-area:d
+          }
+          .card4{
+             grid-area:e
+          }
+
+          .card5{
+             grid-area:g
+          }
+
+          .card6{
+             grid-area: f
+          }
+
+          .menu1 div{
+             background: #FF5733;
+                height: 100%;
+                  border: solid 2px black;
+
+          }
+
+          .menu2 div{
+             background: yellow;
+             height: 100%;
+          }
+          a:hover {
+            color: white;
+          }
+
+          .card1 section, .card2 section, .card3 section, .card4 section, .card5 section, .card6 section{
+             background: lightblue;
+                height:100%;
+                text-align: center;
+          }
+          @media (max-width: 1024px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+             grid-template-areas: "a a"
+                                  "b c"
+                                  "d e"
+                                  "f g"
+                                  "h i";
+                height: 100vh;
+          }
+
+          }
+          @media (max-width: 480px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+             grid-template-areas: "a"
+                                  "b"
+                                  "c"
+                                  "d"
+                                  "e"
+                                  "f"
+                                  "g"
+                                  "h"
+                                  "i"
+                                ;
+                height: 100vh;
+
+          }
+             .aside{
+                display: none;
+             }
+
+          }
+
+
+</style>
+</head>
+<body>
+  <!-- https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+  <div class="container">
+     <!-- left menu -->
+     <section class="menu1">
+        <div>      <h1> American Literature</h1>
+                  <nav>
+                  <a href="./index.html"> Home</a>
+                  <a href="./childrenstories.html"> Children's stories</a>
+                  <a href=""> Stories for Students</a>
+                  <a href=""> Great Short Stories</a>
+
+                </nav>
+                <p> Out here giving the best suggestions for books </p></div>
+     </section>
+
+     <!-- card 1 -->
+     <article class="card1">
+        <section>       <a href="./storydetail.html"> Five Little Pigs</a>
+                 <br/>
+
+                 <img src="fivelittlepigs.jpg" alt="The Five Little Pigs"/>
+
+                 <p> A family of 5 little pigs all go
+                   <br/>
+                    through a different day </p></section>
+     </article>
+
+     <!-- card 2 -->
+     <article class="card2">
+        <section><a href=""> The Gingerbread Man</a>
+          <br/>
+          <img src="gingerbreadman.jpg" style="max-width:240px; max-height:300px;" alt="The Gingerbreadman"/>
+
+          <p> A Gingerbread Man's escape to
+              <br/>
+             freedom </p></section>
+     </article>
+
+     <!-- card 3 -->
+     <article class="card3">
+        <section><a href=""> The Ugly Duckling</a>
+
+
+          <br/>
+          <img src="theuglyduckling.jpg" alt="The Ugly Duckling" />
+
+          <p> A duckling just trying to grow
+              <br/>
+              up and prove others wrong</p></section>
+     </article>
+
+     <article class="card4">
+        <section><a href=""> Little Red Riding Hood</a>
+
+        <br/>
+
+        <img src="littleredridinghood.jpg" alt="Little Red Riding Hood" />
+        <br/>
+
+        <p> A young girl trying to stay
+            <br/>
+          away from a big bad wolf</p></section>
+     </article>
+
+     <article class="card5">
+        <section><a href=""> The Three Litle Pigs</a>
+
+
+          <br/>
+          <img src="threelittlepigs.jpg" alt="Three Little Pigs" />
+
+          <br/>
+
+          <p> Three little pigs who build
+            <br/>
+             three different houses try to
+             <br/>
+              endure the big bad wolf</p></section>
+     </article>
+
+     <article class="card6">
+        <section><a href=""> Jack and the Beanstalk</a>
+
+          <br/>
+          <img src="jackandthebeanstalk.jpg" style="max-width:240px; max-height:300px;" alt= "Jack and the beanstalk" />
+
+          <br/>
+
+          <p> A young boy who trades
+              <br/>
+             for magic beans </p></section>
+     </article>
+  </div>
+  </body>
+  </html>
