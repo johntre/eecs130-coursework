@@ -1,0 +1,29 @@
+.photo{
+
+    width: 300px;
+    height: 300px;
+    border: solid 1px #000;
+    /* background-size: cover; */
+
+}
+
+.card {
+
+  width:300px;
+  height:450px;
+  border: solid 1px #000;
+  padding:20px;
+  display:inline-block;
+  vertical-align: top;
+  text-align: center;
+
+
+};
+
+/* .audio{
+  width:500px;
+  height:550px;
+  border: solid 1px #000;
+  padding:20px;
+
+} */
