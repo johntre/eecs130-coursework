@@ -1,0 +1,80 @@
+.menu1, .menu2, .card1 ;
+body{
+  background: url(https://i.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+}
+/* title {
+    font-size: 30px
+
+}
+
+h1 {
+    font-size: 25px;
+  }
+  body {
+     font-family: 'Saira Extra Condensed', sans-serif;
+  } */
+
+.container {
+   display: grid;
+ grid-template-columns: 1fr 1fr;
+   grid-template-rows: 0.01fr 0.01fr 0.01fr;
+   grid-template-areas: "a a"
+                        "b c"
+                        "d d";
+
+
+   min-height: 100vh;
+   font-family: 'Saira Extra Condensed', sans-serif;
+   word-spacing: 8px;
+   font-size: 20px;
+
+
+}
+
+
+.menu1{
+
+  grid-area: a;
+  text-align: left;
+
+}
+.menu2{
+   grid-area:b;
+   text-align: left;
+}
+.card1{
+
+  grid-area: c;
+  text-align: left;
+}
+
+.menu3{
+  grid-area: d;
+  text-align: center;
+
+}
+.menu1 div{
+     background: #FF5733;
+        height: 100%;
+  }
+
+  .menu2 div{
+     background: white;
+     height: 100%%;
+  }
+  .card1 section {
+     background: lightblue;
+        height:100%;
+  }
+  .menu3 div{
+    background: #FF5733;
+       height: 100%%;
+  }
+
+.title2{
+  text-size:20px;
+
+
+};

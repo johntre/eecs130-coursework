@@ -3,12 +3,12 @@
         <title>Serving Local</title>
 
         <style>
-        .menu1, .menu2, .card1;
-        body{
-          background: url(https://i.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg);
+
+        /* body{
+
           background-repeat: repeat-y;
           background-position: center;
-        }
+        } */
         /* title {
             font-size: 30px
 
@@ -82,7 +82,46 @@
           text-size:20px;
 
 
-        };
+        }
+        @media (max-width: 1024px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 0.08fr 0.08fr 0.08fr 0.08fr;
+             grid-template-areas: "a"
+                                  "b"
+                                  "c"
+                                  "d"
+                                  ;
+                                  min-height: 100vh;
+                                  font-family: 'Saira Extra Condensed', sans-serif;
+                                  word-spacing: 8px;
+                                  font-size: 20px;
+          }
+
+          }
+          @media (max-width: 480px) {
+             /* tablet layout here */
+             .container{
+             display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 0.08fr 1fr 0.08fr 0.08fr;
+             grid-template-areas: "a"
+                                  "b"
+                                  "c"
+                                  "d";
+
+                                min-height: 100vh;
+                                font-family: 'Saira Extra Condensed', sans-serif;
+                                word-spacing: 8px;
+                                font-size: 20px;
+              }
+
+
+
+
+};
 
 
 
@@ -103,6 +142,7 @@
                   <a href="./index.html"> Home</a>
                   <a href="./aboutus.html"> About us</a>
                   <a href="./howitworks.html"> How it Works</a>
+                  <a href="./user.html"> Get service now</a>
 
                 </nav>
                 </div>

@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Get Service Form</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- <style>
+        .menu1, .menu2, .card1 ;
+        body{
+          background: url(https://i.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg);
+          background-repeat: repeat-y;
+          background-position: center;
+        }
+        /* title {
+            font-size: 30px
+
+        }
+
+        h1 {
+            font-size: 25px;
+          }
+          body {
+             font-family: 'Saira Extra Condensed', sans-serif;
+          } */
+
+        .container {
+           display: grid;
+         grid-template-columns: 1fr 1fr;
+           grid-template-rows: 0.01fr 0.01fr 0.01fr;
+           grid-template-areas: "a a"
+                                "b c"
+                                "d d";
+
+
+           min-height: 100vh;
+           font-family: 'Saira Extra Condensed', sans-serif;
+           word-spacing: 8px;
+           font-size: 20px;
+
+
+        }
+
+
+        .menu1{
+
+          grid-area: a;
+          text-align: left;
+
+        }
+        .menu2{
+           grid-area:b;
+           text-align: left;
+        }
+        .card1{
+
+          grid-area: c;
+          text-align: left;
+        }
+
+        .menu3{
+          grid-area: d;
+          text-align: center;
+
+        }
+        .menu1 div{
+             background: #FF5733;
+                height: 100%;
+          }
+
+          .menu2 div{
+             background: white;
+             height: 100%;
+          }
+          .card1 section {
+             background: lightblue;
+                height:100%;
+          }
+          .menu3 div{
+            background: #FF5733;
+               height: 100%;
+          }
+
+        .title2{
+          text-size:20px;
+
+
+        };
+
+
+
+
+
+
+        </style> -->
+
+    </head>
+    <body>
+        <section class="menu1">
+          <div>Helping Hand
+
+             <nav>
+                 <a href="./index.html"> Home</a>
+                 <a href="./aboutus.html"> About us</a>
+                 <a href="./howitworks.html"> How it Works</a>
+                 <a href="./user.html"> Get service now</a>
+
+               </nav>
+               </div>
+
+        </section>
+
+        <section class="menu2">
+            <h1>Request a service</h1>
+            <div class="row">
+                <label>Name:</label>
+                <input type="text" name="" id="name">
+            </div>
+            <div class="row">
+                <label>Service type:</label> <input type="text" name="" id="service_type">
+            </div>
+            <div class="row">
+                <label>Address:</label> <input type="text" name="" id="address">
+            </div>
+            <div class="row">
+                <label>Email:</label> <input type="text" name="" id="email">
+            </div>
+            <div class="row">
+                <label>Price willing to pay:</label> <input type="text" name="" id="price">
+            </div>
+
+            <button>Submit</button>
+        </section>
+
+        <section class="card1">
+          <img src="lawnmower.jpg" style="max-width:450px; max-height:400px;" alt="lawnmowing"/>
+        </section>
+
+        <section class="menu3">
+          <div>
+          <p> Helping Hand </p>
+          </div>
+        </section>
+
+        <script ="text/javascript" src="user.js"></script>
+    </body>
+</html>
