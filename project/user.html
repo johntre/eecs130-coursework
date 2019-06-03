@@ -21,7 +21,7 @@
 
            min-height: 100vh;
            font-family: 'Saira Extra Condensed', sans-serif;
-           word-spacing: 8px;
+           word-spacing: 6px;
            font-size: 20px;
 
 
@@ -67,10 +67,28 @@
                height: 100%;
           }
 
-        .title2{
-          text-size:20px;
-
-
+        .footer {
+          position: absolute;
+          bottom: 0;
+          background-color: #ff5733;
+          width: 100%;
+        }
+        .footer_text {
+          text-align: center;
+          font-size: 20px;
+          color: white;
+        }
+        a:hover {
+          color: orange;
+        }
+        .title2 {
+          color: white;
+          text-transform: uppercase;
+          font-size: 25px;
+        }
+        a {
+          color: black;
+          text-decoration: none;
         }
         @media (max-width: 1024px) {
              /* tablet layout here */
@@ -123,7 +141,7 @@
             <div class="container">
        <!-- left menu -->
        <section class="menu1">
-         <div><div class = "title2"> Helping Hand </div>
+           <div class="nav"><div class = "title2"> Helping Hand </div>
 
 
             <nav>
@@ -131,6 +149,7 @@
                 <a href="./aboutus.html"> About us</a>
                 <a href="./howitworks.html"> How it Works</a>
                 <a href="./user.html"> Get service now</a>
+                <a href="./map2.html"> See live map</a>
 
 
               </nav>
@@ -140,13 +159,28 @@
 
         <section class="menu2">
           <h1>Request a service</h1>
+
+          <div class="row">
+            <label>Service:</label>
+            <select id="service_type">
+                  <option value="snowremoval">Snow Removal</option>
+                  <option value="gardening">Gardening</option>
+                  <option value="dogwalking">Dog Walking</option>
+                  <option value="objectmoving">Object Moving</option>
+                  <option value="handyman">Handyman</option>
+
+
+
+                </select>
+
+              <!-- <label>Service type:</label> <input type="text" name="" id="service_type"> -->
+          </div>
+          <br/>
           <div class="row">
               <label>Name:</label>
               <input type="text" name="" id="name">
           </div>
-          <div class="row">
-              <label>Service type:</label> <input type="text" name="" id="service_type">
-          </div>
+
           <div class="row">
               <label>Address:</label> <input type="text" name="" id="address">
           </div>
@@ -166,7 +200,7 @@
 
       <section class="menu3">
         <div>
-        <p> Helping Hand </p>
+        <p class="footer_text"> Helping Hand </p>
         </div>
       </section>
       <script ="text/javascript" src="user.js"></script>
