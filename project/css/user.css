@@ -43,7 +43,7 @@
   }
 
   .menu2 div{
-     background: yellow;
+     background: white;
      height: 100%;
   }
   .card1 section {
@@ -55,11 +55,6 @@
        height: 100%;
   }
 
-.title2{
-  text-size:20px;
-
-
-}
 .footer {
   position: absolute;
   bottom: 0;

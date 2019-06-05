@@ -12,7 +12,7 @@ const getservicerequests = () => {
 }
 const getbubbletemplate= (sr) => {
   return `<strong>${sr.name}, (${sr.service_type})</strong><br>
-        <p> Hello, ${sr.name} wants ${sr.service_type}! </p>
+        <p> Hello, ${sr.name} wants ${sr.service_type} for $${sr.price}! </p>
         Address: ${sr.address}`;
 
 };
