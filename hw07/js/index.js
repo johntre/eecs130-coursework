@@ -9,7 +9,7 @@ const loadCardListView = (imagesFromServer) => {
     // save to a global variable so this data will be
     // accessible to the other functions:
     appPhotos = imagesFromServer;
-    
+
     //clear out old cards (if there are any):
     document.querySelector('.cards').innerHTML = '';
 
@@ -26,8 +26,12 @@ const loadCardListView = (imagesFromServer) => {
     attachEventHandlers();
 };
 
-const getImagesFromServer = () => {
-    fetch(serverURL + 'photos')
+const getImagesFromServer = (querystring=null) => {
+  let url= serverURL + 'photos';
+  if(querystring){
+    url += '?' + querystring
+  }
+    fetch(url)
         .then((response) => {
             return response.json();
         })
@@ -38,17 +42,93 @@ const getCurrentPhoto = () => {
     return appPhotos[activeCardID];
 };
 
+
 const loadCardDetailView = () => {
     const container = document.querySelector('.preview_box');
     const photoItem = getCurrentPhoto();
     const imageURL = `url("${photoItem.image_url}")`;
     container.querySelector('.featured_image').style.backgroundImage = imageURL;
     container.querySelector('.caption').innerHTML = getPhotoDetailTemplate(photoItem);
-    
+
     // update CSS:
     container.classList.add('active');
     document.querySelector('main').style.overflow = 'hidden';
 };
+
+const buildUserMenu = (usersFromServer)=> {
+
+  console.log(usersFromServer)
+  const select = document.querySelector('#users');
+select.innerHTML = '';
+  for (user of usersFromServer) {
+    const template = `<option value="${user.id}"> ${user.username}</option>`;
+    select.innerHTML += template;
+  }
+document.querySelector('#users').onchange = filterByUser
+  // 1. target the seelector you want to populate
+  //goal: appen one option per user
+};
+
+const getUsersFromServer= () => {
+
+  fetch(serverURL + 'users')
+  .then((response) => {
+      return response.json();
+
+  })
+    .then(buildUserMenu);
+
+};
+
+const filterByUser = () => {
+  const querystring= 'user_id'+ '=' + document.querySelector('#users').value;
+  getImagesFromServer(querystring);
+}
+
+// const likePhoto = () => {
+//   const photoItem = getCurrentPhoto();
+//   const currentlikes = photoItem.likes;
+//   fetch ('https://hw07jdrake.herokuapp.com/photos/' + photoItem.id, {
+//       method: 'PATCH',
+//       headers: {
+//           'Accept': 'application/json',
+//           'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify({
+//         "likes":currentlikes + 1
+//       })
+// })
+
+// .then(response => response.json())
+// .then(data => {
+//   appPhotos(activeCardID) = data;
+//     loadCardDetailView();
+//  });
+// };
+
+const likePhoto = () => {
+  const url = serverURL + 'photos/' + photoID;
+  const photo = appPhotos.find(function(element) {
+    return element.id === parseInt(photoID);
+  });
+  photo.likes = photo.likes + 1;
+  fetch(url, {
+        method: 'PATCH',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "likes": photo.likes
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        loadCardDetailView();
+    });
+
+}
 
 const showPhotoDetail = (e) => {
     activeCardID = parseInt(e.target.parentElement.getAttribute('data-index'));
@@ -63,6 +143,7 @@ const formatDate = (date) => {
 const getPhotoDetailTemplate = (photoItem, comments) => {
     let template = `
         <h2 class="title">${photoItem.title}</h2>
+        <button onclick ="like photo(${photoItem.id})"
         <p class="handle">@${photoItem.username}</p>
         <p class="likes">Likes: ${photoItem.likes}</p>
         <p class="date">${formatDate(photoItem.date)}</p>`;
@@ -107,3 +188,4 @@ const attachEventHandlers = () => {
 
 // Initialize
 getImagesFromServer();
+getUsersFromServer();
