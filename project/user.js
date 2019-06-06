@@ -50,7 +50,8 @@ const addNewUser = (lat,long) => {
             "price": price,
             "address": address,
             "lat": lat,
-            "long": long
+            "long": long,
+            "time_created":new Date()
         })
     })
     .then(response => console.log(response))
