@@ -85,28 +85,9 @@ const filterByUser = () => {
   getImagesFromServer(querystring);
 }
 
-// const likePhoto = () => {
-//   const photoItem = getCurrentPhoto();
-//   const currentlikes = photoItem.likes;
-//   fetch ('https://hw07jdrake.herokuapp.com/photos/' + photoItem.id, {
-//       method: 'PATCH',
-//       headers: {
-//           'Accept': 'application/json',
-//           'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         "likes":currentlikes + 1
-//       })
-// })
-
-// .then(response => response.json())
-// .then(data => {
-//   appPhotos(activeCardID) = data;
-//     loadCardDetailView();
-//  });
-// };
-
 const likePhoto = () => {
+  const photoItem = getCurrentPhoto();
+  const photoID = photoItem.id;
   const url = serverURL + 'photos/' + photoID;
   const photo = appPhotos.find(function(element) {
     return element.id === parseInt(photoID);
@@ -143,9 +124,8 @@ const formatDate = (date) => {
 const getPhotoDetailTemplate = (photoItem, comments) => {
     let template = `
         <h2 class="title">${photoItem.title}</h2>
-        <button onclick ="like photo(${photoItem.id})"
         <p class="handle">@${photoItem.username}</p>
-        <p class="likes">Likes: ${photoItem.likes}</p>
+        <p class="likes">Likes: <button onclick="likePhoto()">&hearts;${photoItem.likes}</button></p>
         <p class="date">${formatDate(photoItem.date)}</p>`;
     if (!comments) {
         return template;
