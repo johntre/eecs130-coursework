@@ -1,0 +1,31 @@
+#mapid {
+  height: 100vh;
+  width: 100%;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.col-md-3 {
+  background: #F8F8F8;
+  height: 100vh !important;
+  box-shadow: 7px 6px 17px -4px rgba(102,32,57,0.33) !important;
+  overflow-y: scroll;
+}
+.icons {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 15px;
+  /* border: solid 2px black; */
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px;
+  background: white;
+  box-shadow: 7px 6px 17px -4px rgba(102,32,57,0.33);
+}
+.content {
+  box-shadow: 7px 6px 17px -4px rgba(102,32,57,0.33);
+  background: white;
+  border-radius: 5px;
+  margin: 8px 8px 8px 8px;
+  /* border: solid 2px black; */
+}

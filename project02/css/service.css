@@ -1,0 +1,121 @@
+.success {
+  display: none;
+}
+.successactive {
+  display: block;
+  color: black;
+  text-align: center;
+}
+body {
+	margin:  0;
+}
+.content {
+	width: 100%;
+	margin:  0 auto;
+  background: linear-gradient(to bottom right, #ff6600 0%, #ff99cc 100%);
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+}
+.my_form  {
+	background: #fff;
+	width: 968px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 180px 0;
+	color: #fff;
+	font-weight: 700;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+}
+.my_form .form_image {
+	margin-bottom: -6px;
+}
+img {
+	width: 109%;
+	height: 99%;
+}
+.my_form .form_image img {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.my_form .form_right {
+  padding: 30px 40px;
+	position: relative;
+	width: 100%;
+}
+.my_form .form_right h2 {
+	color: #333;
+	font-size: 35px;
+	text-align: center;
+	position: relative;
+	padding: 6px 0 0;
+	margin-bottom: 47px;
+}
+.my_form .form-row {
+  width: 100%;
+}
+.my_form .form_right .button {
+	text-align: center;
+}
+.my_form .form_right .input-text {
+	margin-bottom: 35px;
+}
+.my_form .form_right input {
+	width: 92%;
+  padding: 0px 15px 10px 15px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #e5e5e5;
+  appearance: unset;
+  -webkit-appearance: unset;
+  outline: none;
+  -webkit-outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.my_form .form_right select {
+	width: 92%;
+  padding: 0px 15px 10px 15px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #e5e5e5;
+  appearance: unset;
+  -webkit-appearance: unset;
+  outline: none;
+  -webkit-outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+	margin-bottom: 25px;
+}
+.my_form .form_right .form-row input:focus {
+	border-bottom: 2px solid #fe892a;
+}
+.my_form .form_right button {
+	background: #fe892a;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	width: 160px;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	border: none;
+	margin: 11px 0 50px 0px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: 700;
+	font-size: 19px;
+}
+.my_form .form_right button:hover {
+	background: #e37b27;
+}
+.my_form .form_right .button input {
+	padding: 13px;
+}
+input::-webkit-input-placeholder {
+  color: #666;
+  font-size: 16px;
+}
